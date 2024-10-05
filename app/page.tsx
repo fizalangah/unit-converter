@@ -50,19 +50,19 @@ export default function Unitconverter() {
   const units = Object.keys(conversionRates)
   return (
     <div className="flex justify-center items-center text-center ">
-      <div className="bg-black h-[500px] w-[500px] rounded-xlmt-[100px] text-gray-300  mt-[100px]">
+      <div className="bg-black h-[500px] lg:w-[500px] w-[400px] rounded-xlmt-[100px] text-gray-300  mt-[100px] rounded-xl">
 
         <h1 className="mt-10 text-2xl font-bold">Unit Converter</h1>
         <p className="mt-4">Convert values between different units.</p>
 
 
-        <div className="flex flex-row mt-5 justify-center items-center gap-x-5">
+        <div className="flex flex-row mt-5 justify-center items-center lg:gap-x-5 gap-x-3">
 
       
         <select
     value={fromUnit}
     onChange={(e) => setFromUnit(e.target.value)}
-    className="w-[200px] p-2 rounded-xl text-black outline-none bg-gray-400"
+    className="lg:w-[200px] w-[150px] p-2 rounded-xl text-black outline-none bg-gray-400"
   >
     {units.map((unit) => (
       <option key={unit} value={unit}>
@@ -73,7 +73,7 @@ export default function Unitconverter() {
   <select
     value={toUnit}
     onChange={(e) => setToUnit(e.target.value)}
-    className="w-[200px] p-2 rounded-xl text-black outline-none bg-gray-400"
+    className="lg:w-[200px] w-[150px] p-2 rounded-xl text-black outline-none bg-gray-400"
   >
     {units.map((unit) => (
       <option key={unit} value={unit}>
@@ -90,13 +90,13 @@ export default function Unitconverter() {
       onChange={(e)=>setValue(parseFloat(e.target.value))}
        placeholder="Enter value" 
 
-       className="w-[400px] rounded-xl text-black p-2 mt-2 bg-gray-400"  />
+       className="lg:w-[400px] w-[300px] rounded-xl text-black p-2 mt-2 bg-gray-400"  />
       </div>
 
         <div className="flex justify-center items-center text-center">
           <button  
           onClick={convert}
-        className="flex justify-center items-center text-center w-[400px] bg-gray-400 text-black rounded-xl p-2 mt-10">Convert</button>
+        className="flex justify-center items-center text-center lg:w-[400px] w-[300px] bg-gray-400 text-black rounded-xl p-2 mt-10">Convert</button>
         </div>
         
                {/* display div */}
